@@ -135,14 +135,35 @@ body{
 .api{
     display:inline-block;
     margin-top:18px;
+    padding:8px 18px;
+
     color:#9b9bb7;
     text-decoration:none;
     font-size:.9rem;
-    transition:.2s;
+
+    border-radius:12px;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease,
+        border-color .18s ease,
+        color .18s ease;
 }
 
-.api:hover{
+.api:hover,
+.api:focus{
     color:#ffffff;
+
+    background:#1b1b28;
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 0 0 2px rgba(79,140,255,.15),
+        0 0 20px rgba(79,140,255,.18);
+
+    outline:none;
 }
 
 </style>

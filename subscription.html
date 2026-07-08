@@ -9,156 +9,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#0a0a0f;
-color:#fff;
-font-family:'Inter',sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    background:#0a0a0f;
+    color:#fff;
+    font-family:'Inter',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
 .container{
-width:100%;
-max-width:760px;
-padding:40px;
-text-align:center;
+    width:100%;
+    max-width:760px;
+    padding:40px;
+    text-align:center;
+}
+
+/* ---------- STATUS CARD ---------- */
+
+.status-card{
+
+    background:#15151f;
+
+    border-radius:28px;
+
+    padding:50px 40px;
+
+    border:1px solid rgba(37,211,102,.15);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45);
+
+    margin-bottom:45px;
 }
 
 .status{
 
-font-size:2rem;
-font-weight:700;
-margin-bottom:50px;
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:35px;
 
 }
 
-.active{
+.dot{
 
-color:#25D366;
-
-}
-
-.info{
-
-margin-bottom:35px;
+    color:#25D366;
 
 }
 
 .label{
 
-color:#777790;
+    color:#777790;
 
-font-size:1rem;
+    font-size:.95rem;
 
-letter-spacing:.15em;
+    letter-spacing:.18em;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 .value{
 
-font-size:2rem;
+    font-size:2rem;
 
-font-weight:700;
+    font-weight:700;
+
+    margin-bottom:28px;
 
 }
+
+/* ---------- BUTTON ---------- */
 
 .button{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-height:90px;
+    height:95px;
 
-margin-top:60px;
+    border-radius:28px;
 
-border-radius:24px;
+    background:#15151f;
 
-background:#15151f;
+    text-decoration:none;
 
-text-decoration:none;
+    color:#fff;
 
-color:white;
+    font-size:1.55rem;
 
-font-size:1.5rem;
+    font-weight:700;
 
-font-weight:700;
+    border:1px solid rgba(255,255,255,.05);
 
-border:1px solid rgba(255,255,255,.05);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
 
-transition:.18s;
-
-box-shadow:0 20px 50px rgba(0,0,0,.45);
+    transition:.18s;
 
 }
 
-.button:hover{
+.button:hover,
+.button:focus{
 
-transform:scale(1.03);
+    transform:scale(1.03);
 
-background:#1b1b28;
+    background:#1b1b28;
+
+    border-color:rgba(255,255,255,.08);
+
+    outline:none;
 
 }
+
+/* ---------- API ---------- */
 
 .api{
 
-margin-top:35px;
+    display:inline-block;
 
-display:inline-block;
+    margin-top:28px;
 
-font-size:.95rem;
+    color:#777790;
 
-color:#777790;
+    font-size:.95rem;
 
-text-decoration:none;
+    text-decoration:none;
+
+    transition:.18s;
+
+}
+
+.api:hover{
+
+    color:#ffffff;
 
 }
 
-.back{
-
-position:absolute;
-
-left:40px;
-
-top:30px;
-
-font-size:1rem;
-
-color:#777790;
-
-text-decoration:none;
-
-}
 </style>
 
 </head>
 
 <body>
 
-<a class="back" href="index.html">
-← Back
-</a>
-
 <div class="container">
 
+<div class="status-card">
+
 <div class="status">
-<span class="active">●</span> Active
+
+<span class="dot">●</span> ACTIVE
+
 </div>
 
-<div class="info">
 <div class="label">
 Expires
 </div>
@@ -166,15 +181,12 @@ Expires
 <div class="value">
 15 August 2026
 </div>
-</div>
-
-<div class="info">
 
 <div class="label">
 Remaining
 </div>
 
-<div class="value">
+<div class="value" style="margin-bottom:0;">
 23 Days
 </div>
 
@@ -183,6 +195,8 @@ Remaining
 <a class="button" href="#">
 Renew Subscription
 </a>
+
+<br>
 
 <a class="api" href="#">
 API Key

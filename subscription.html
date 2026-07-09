@@ -198,5 +198,14 @@ body{
 
 </div>
 
+<script>
+const params = new URLSearchParams(window.location.search);
+const deviceId = params.get("id");
+
+if (deviceId) {
+    document.getElementById("api").href = "apikey.html?id=" + encodeURIComponent(deviceId);
+}
+</script>
+
 </body>
 </html>
